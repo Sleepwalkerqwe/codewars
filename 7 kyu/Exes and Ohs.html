@@ -1,0 +1,12 @@
+<script>
+    function XO(str) {
+        let tx = 0
+        let to = 0
+        for (i = 0; i < str.length; i++) {
+            if (str[i] == "x") tx++
+            if (str[i] == "o") to++
+        }
+        if (tx == to) return true
+        return false
+    }
+</script>

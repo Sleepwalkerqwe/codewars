@@ -1,0 +1,15 @@
+<script>
+    String.prototype.toJadenCase = function () {
+        s = this
+        let s1 = "";
+        for (i = 0; i < s.length; i++) {
+            if (s[i] == ' ') {
+                s1 += s[i] + s[i + 1].toUpperCase()
+                i++
+            }
+            else s1 += s[i]
+        }
+        return s1
+    }
+    console.log(String.prototype.toJadenCase("How can mirrors be real if our eyes aren't real"))
+</script>

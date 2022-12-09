@@ -1,0 +1,11 @@
+<script>
+    function findShort(s) {
+        s = s.split(" ")
+        let sl = s[0].length
+        for (i = 0; i < s.length; i++) {
+            if (sl > s[i].length) sl = s[i].length
+        }
+        return sl
+    }
+    console.log(findShort("bitcoin take over the world maybe who knows perhaps"))
+</script>

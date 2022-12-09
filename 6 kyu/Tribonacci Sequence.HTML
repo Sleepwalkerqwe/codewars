@@ -1,0 +1,21 @@
+<script>
+    function tribonacci(signature, n) {
+        let arr = []
+        arr.push(signature[0])
+        arr.push(signature[1])
+        arr.push(signature[2])
+        let t = 0
+        if (n === null || n == undefined) return []
+        if (n == 1) return [arr[0]]
+        if (n == 2) return [arr[0], arr[1]]
+        if (n == 3) return arr
+        //console.log(arr[arr.length - 1], arr[arr.length - 2], arr[arr.length - 3])
+        for (i = 3; i < n; i++) {
+            let sum = arr[arr.length - 1] + arr[arr.length - 2] + arr[arr.length - 3]
+            arr.push(sum)
+        }
+        return arr
+
+    }
+    console.log(tribonacci([300, 200, 100]))
+</script>

@@ -1,0 +1,20 @@
+<script>
+    function isPangram(str) {
+        let s = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
+        str = str.toLowerCase()
+        let t = 0
+        let count = 0
+        for (i = 0; i < s.length; i++) {
+            for (j = 0; j < str.length; j++) {
+                if (s[i] == str[j]) t = 1
+            }
+            if (t == 0) return false
+            t = 0
+        }
+        return true
+        console.log(s.sort())
+    }
+
+
+    console.log(isPangram("The quick brown fox jumps over the lazy dog."))
+</script>

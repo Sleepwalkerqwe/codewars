@@ -1,0 +1,11 @@
+<script>
+    function friend(friends) {
+        let res = []
+        for (i = 0; i < friends.length; i++) {
+            let s = '' + friends[i]
+            if (s.length == 4) res.push(s)
+        }
+        return res
+    }
+    console.log(friend(["Ryan", "Kieran", "Mark"]))
+</script>

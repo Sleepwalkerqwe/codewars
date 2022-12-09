@@ -1,0 +1,16 @@
+<script>
+    function accum(s) {
+        let s1 = ""
+        s = s.toUpperCase()
+        for (i = 0; i < s.length; i++) {
+            for (j = 0; j < i + 1; j++) {
+                s1 += s[i]
+            }
+            s1 += '-'
+        }
+        let res = ''
+        for (i = 0; i < s1.length - 1; i++) res += s1[i]
+        return res
+    }
+    console.log(accum("cwAt"))
+</script>

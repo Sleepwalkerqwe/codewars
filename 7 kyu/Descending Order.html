@@ -1,0 +1,19 @@
+<script>
+
+    function descendingOrder(arr) {
+        arr = arr.toString(10).split('').map(int => parseInt(int, 10))
+        for (var i = 0; i < arr.length - 1; i++) {
+            for (var j = 0; j < (arr.length - 1) - i; j++) {
+                if (arr[j] > arr[j + 1]) {
+                    var swap = arr[j];
+                    arr[j] = arr[j + 1];
+                    arr[j + 1] = swap;
+                }
+            }
+        }
+        arr = arr.reverse()
+        let s = ""
+        for (i = 0; i < arr.length; i++) s += arr[i]
+        return parseInt(s);
+    }
+</script>

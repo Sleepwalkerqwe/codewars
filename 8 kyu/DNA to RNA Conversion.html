@@ -1,0 +1,12 @@
+<script>
+    function DNAtoRNA(dna) {
+        dna = dna.split("")
+        let s = ''
+        for (i = 0; i < dna.length; i++) {
+            if (dna[i] != "T") s += dna[i]
+            else s += "U"
+        }
+        return s
+    }
+    console.log(DNAtoRNA("TTTT"))
+</script>

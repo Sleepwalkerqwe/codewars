@@ -1,0 +1,14 @@
+<script>
+    function findNextSquare(a) {
+        if (a ** 0.5 % 1 != 0) return -1
+        let res;
+        for (i = a + 1; i != 0; i++) {
+            if (i ** 0.5 % 1 == 0) {
+                res = i
+                break
+            }
+        }
+        return res
+    }
+    console.log(findNextSquare(25))
+</script>

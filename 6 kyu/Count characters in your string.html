@@ -1,0 +1,27 @@
+<script>
+    function count(string) {
+
+        let t = 1
+        let s = []
+        let res = "{"
+        let arr = string.split("").sort();
+        let x = arr[0]
+        arr.push("%%%")
+        console.log(arr.length)
+        for (i = 0; i < arr.length - 1; i++) {
+            if (arr[i] == arr[i + 1]) {
+                x = arr[i]
+                t++
+            }
+            if (arr[i] != arr[i + 1]) {
+                res += " " + x + ": " + t + ","
+                x = arr[i];
+                t = 1;
+            }
+        }
+        //  if (arr[arr.length - 1] != arr[arr.length - 2]) res += " " + arr[arr.length - 1] + ": 1 }"
+        return res + " }"
+
+    }
+    console.log(count("awerw werwer wewa"))
+</script>

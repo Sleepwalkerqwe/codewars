@@ -1,0 +1,29 @@
+<script>
+    function wave(str) {
+        let a = []
+        let res = []
+        let t = 0
+        for (i = 0; i < str.length; i++) {
+
+            //console.log(t + "qqqq" + i)
+            let arr = str[i]
+            if (t == i) {
+                for (j = 0; j < str.length; j++) {
+                    if (str[i] == " ") {
+                        // j++
+                        continue
+                    }
+                    if (j != i) a.push(str[j])
+                    if (j == i) a.push(arr.toUpperCase(arr[i]))
+                }
+            }
+            if (a != "") res.push(a.join(""))
+            // console.log(a)
+            a = []
+            t++
+
+        }
+        return res
+    }
+    console.log(wave("Маша самая лучшая"))
+</script>

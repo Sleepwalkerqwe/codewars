@@ -1,0 +1,18 @@
+<script>
+    function duplicateEncode(word) {
+        let t = 0
+        word = word.toLowerCase()
+        let res = ''
+        let count = 0
+        for (i = 0; i < word.length; i++) {
+            for (j = 0; j < word.length; j++) {
+                if (word[j] == word[i]) t++
+            }
+            if (t == 1) res += "("
+            else res += ")"
+            t = 0
+        }
+        return res
+    }
+    console.log(duplicateEncode("din"))
+</script>

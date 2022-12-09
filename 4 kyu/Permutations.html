@@ -1,0 +1,37 @@
+<script>
+    function permutations(str) {
+        let dictionary = []
+        if (str.length === 1) {
+            dictionary.push(str)
+            return dictionary
+        }
+
+        let letters = string.split("")
+        dictionary = string.split("")
+
+        for (i = 0; dictionary[0] < str.length; i++) {
+            for (j = 0; j < letters.length; j++) {
+                dictionary.push(dictionary[0] + letters[j])
+            }
+            dictionary.splice(0, 1)
+        }
+
+
+        for (i = 0; i < dictionary.length;) {
+            if (dictionary.filter(el => el == dictionary[i]).length > 1 || repLetters(i, string, dictionary)) {
+                dictionary.splice(i, 1)
+            } else i++
+        }
+        return dictionary.sort()
+
+        function repLetters(i, str, dictionary) {
+            for (j = 0; j < str.length - 1; j++) {
+                if (dictionary[i].split('').filter(el => el == string.split('')[j]).length != string.split(""))
+                    return true
+            }
+        }
+        return false
+
+    }
+
+</script>

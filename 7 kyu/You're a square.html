@@ -1,0 +1,9 @@
+<script>
+    var isSquare = function (n) {
+        if (n == 0) return true, "0 is a square number (0 * 0)"
+        if (n < 0) return false, n + ": Negative numbers cannot be square numbers"
+        if (n ** 0.5 % 1 == 0) return true, n + " is a square number (" + n ** 0.5 + "*" + n ** 0.5 + ")"
+        else return false, n + " is not a square number"
+    }
+    console.log(isSquare(-257))
+</script>ы

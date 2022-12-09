@@ -1,0 +1,14 @@
+<script>
+    function nbYear(p0, percent, aug, p) {
+        let population = p0
+        let count = 0;
+        while (population < p) {
+            population += population / 100 * percent
+            population += aug
+            count++
+        }
+
+        return count
+    }
+    console.log(nbYear(1500000, 0.25, 1000, 2000000))
+</script>

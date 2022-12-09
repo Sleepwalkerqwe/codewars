@@ -1,0 +1,17 @@
+<script>
+    function firstNonConsecutive(arr) {
+        if (arr === null || arr == undefined || arr.length < 2) return null;
+        let flag = true
+        let f;
+        for (i = 0; i < arr.length - 1; i++) {
+            if (arr[i + 1] - arr[i] != 1) {
+                f = arr[i + 1]
+                flag = false
+                break
+            }
+        }
+        if (flag == false) return f
+        else return null
+    }
+    console.log(firstNonConsecutive([8, 10, 11, 12, 14, 15, 16, 17]))
+</script>

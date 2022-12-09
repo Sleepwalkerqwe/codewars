@@ -1,0 +1,18 @@
+<script>
+    function arrayDiff(a, b) {
+        let t = 0
+        let arr = []
+        let count = 0
+        console.log(a.length)
+        console.log(b.length)
+        for (i = 0; i < a.length; i++) {
+            for (j = 0; j < b.length; j++) {
+                if (a[i] == b[j]) t = 1
+            }
+            if (t == 0) arr.push(a[i])
+            t = 0
+        }
+        return arr
+    }
+    console.log(arrayDiff([1, 2, 2], [1]))
+</script>

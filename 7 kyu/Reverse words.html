@@ -1,0 +1,11 @@
+<script>
+    function reverseWords(str) {
+        str = str.split(" ")
+        let s = ''
+        let s1 = ''
+        for (i = 0; i < str.length; i++) s1 += str[i].split("").reverse().join("") + " "
+        for (i = 0; i < s1.length - 1; i++) s += s1[i]
+        return s
+    }
+    console.log(reverseWords('The quick brown fox jumps over the lazy dog.'))
+</script>

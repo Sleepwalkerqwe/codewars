@@ -1,0 +1,12 @@
+<script>
+    function twoSum(n, target) {
+        let s = 0
+        let arr = []
+        for (i = 0; i < n.length; i++) {
+            for (j = 0; j < n.length; j++) {
+                if (n[i] + n[j] == target && i != j) return [i, j]
+            }
+        }
+    }
+    console.log(twoSum([1, 2, 3], 4))
+</script>

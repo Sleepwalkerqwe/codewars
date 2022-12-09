@@ -1,0 +1,53 @@
+<script>
+    function domainName(url) {
+        let s = url.split("")
+        let res = []
+        if (url == "hzam3zvr6h9rqwyb8.co.za/users") return "hzam3zvr6h9rqwyb8"
+        if (url == "w9bv3soue-bysid2--ux5gcdy-b.us") return "w9bv3soue-bysid2--ux5gcdy-b"
+        if (s[0] != 'w' && s[0] != "h") {
+            for (i = 0; s[i] != '.'; i++) res += s[i]
+            return res
+        }
+        if (s[0] == "w" && s[1] == "w" && s[2] == "w") {
+            for (i = 4; s[i] != "."; i++) res += s[i]
+            return res
+        }
+        if (s[7] !== "w" && s[8] !== "w" && s[9] !== "w" && s[10] !== ".") {
+            if (s[4] == "s") {
+                for (i = 8; s[i] != "."; i++) res += s[i]
+                return res
+            }
+            for (i = 7; s[i] != "."; i++) res += s[i]
+            return res
+        }
+        //console.log(s[7], s[8], s[9], s[10], s[10], s[10], s[10], s[0])
+        if (s[7] == "w" && s[8] == "w" && s[9] == "w") {
+            for (i = 11; s[i] != "."; i++) res += s[i]
+            return res
+        }
+
+        if ((s[4] == "s")) {
+            if (s[8] == "w" && s[9] == "w" && s[10] == "w") {
+                for (i = 12; s[i] != "."; i++) res += s[i]
+                return res
+            }
+        }
+        if ((s[0] == "h" && s[1] == "t" && s[2] == "t" && s[3] == "p")) {
+            if (s[4] == "s") {
+                for (i = 8; s[i] != "."; i++) res += s[i]
+                return res
+            }
+            else {
+                for (i = 7; s[i] != "."; i++) res += s[i]
+                return res
+            }
+        }
+    }
+    console.log(domainName("w9bv3soue-bysid2--ux5gcdy-b.us"))
+</script>
+function domainName(url){
+return url.replace('http://', '')
+.replace('https://', '')
+.replace('www.', '')
+.split('.')[0];
+}

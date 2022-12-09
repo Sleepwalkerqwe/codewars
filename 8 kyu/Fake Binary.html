@@ -1,0 +1,14 @@
+<script>
+    function fakeBin(x) {
+        let s = ''
+        x = x.split("")
+        for (i = 0; i < x.length; i++) {
+            if (x[i] > 4) x[i] = 1
+            else x[i] = 0
+            s += x[i]
+        }
+        return s
+
+    }
+    console.log(fakeBin('45385593107843568'))
+</script>

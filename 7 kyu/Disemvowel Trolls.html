@@ -1,0 +1,13 @@
+<script>
+    function disemvowel(str) {
+        let s = ''
+        for (i = 0; i < str.length; ++i) {
+            if (str[i] != "a" && str[i] != "e" && str[i] != "i" && str[i] != "o" && str[i] != "q" && str[i] != "u" && str[i] != "y" && str[i] != "A" && str[i] != "E" && str[i] != "I" && str[i] != "O" && str[i] != "Q" && str[i] != "U" && str[i] != "Y") s += str[i]
+        }
+        return s
+    }
+
+    function disemvowel(str) {
+        return (str || "").replace(/[aeiou]/gi, "");
+    }
+</script>

@@ -1,0 +1,13 @@
+<script>
+    function betterThanAverage(classPoints, yourPoints) {
+        let count = 0
+        let sum = 0;
+        for (i = 0; i < classPoints.length; i++) {
+            sum += classPoints[i]
+            count++
+        }
+        if (yourPoints < sum / count) return true
+        return false
+    }
+
+</script>

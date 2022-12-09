@@ -1,0 +1,7 @@
+<script>
+    function solution(str, ending) {
+        if (ending == "") return false
+        return str.slice(-ending.length) == ending
+    }
+    console.log(solution('abc', ''))
+</script>

@@ -1,0 +1,10 @@
+<script>
+    function getSum(a, b) {
+        let sum = 0;
+        if (a == b) return a
+        if (a > b) for (i = b; i <= a; i++) sum += i
+        if (b > a) for (i = a; i <= b; i++) sum += i
+        return sum
+    }
+    console.log(getSum(0, -1))
+</script>
